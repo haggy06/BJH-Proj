@@ -47,9 +47,13 @@ public class GameManager : MonoBehaviour
 
     [Space(5)]
     [SerializeField]
+    private CanvasGroup timeOverPopup;
+
+    [Space(5)]
+    [SerializeField]
     private TextMeshProUGUI scoreText;
 
-    int wrID, qID, rID, sID;
+    int wrID, qID, rID, sID, tID;
     public Sheet1 cQ { get; private set; }
     private void Awake()
     {
@@ -67,6 +71,9 @@ public class GameManager : MonoBehaviour
     {
         LeanTween.cancel(sID);
         speedUpPopup.alpha = 0f;
+
+        LeanTween.cancel(tID);
+        timeOverPopup.alpha = 0f;
 
         scoreText.text = "0";
         LeanTween.cancel(qID);
@@ -140,6 +147,8 @@ public class GameManager : MonoBehaviour
 
     private void TimeOver()
     {
+        tID = LeanTween.alphaCanvas(timeOverPopup, 1f, 0.75f).id;
+
         Choiced(!cQ.answer);
     }
     public void Choiced(bool answer)
