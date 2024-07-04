@@ -44,7 +44,7 @@ public class Check : MonoBehaviour
         if (!alreadySelect)
         {
             alreadySelect = true;
-            id = LeanTween.move(gameObject, choice.transform, 1.5f).setEase(LeanTweenType.easeOutQuart).setOnComplete(() => GameManager.gameManager.Choiced(choice.Answer)).id;
+            id = LeanTween.move(gameObject, choice.transform, 0.75f).setEase(LeanTweenType.easeOutQuart).setOnComplete(() => GameManager.gameManager.Choiced(choice.Answer)).id;
         }
     }
 }
