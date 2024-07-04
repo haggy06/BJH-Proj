@@ -42,8 +42,10 @@ public class GameManager : MonoBehaviour
         print("1");
         yield return wfs;
 
+        GameStartEvent.Invoke();
         CQ();
     }
+    public event Action GameStartEvent = () => { };
 
     public event Action<GameStatus> GameStatusChangeEvent = (value) => Debug.Log("게임 상태 변경 : " + value);
     private void CQ()
@@ -64,7 +66,7 @@ public class GameManager : MonoBehaviour
             cTime += Time.deltaTime;
 
             bedSheet.localScale = new Vector2(0.5f + (cTime / time / 2f), 1f);
-            clockNeedle.eulerAngles = Vector3.forward * (cTime / time * 360f);
+            clockNeedle.eulerAngles = new Vector3(0f, 180f, (cTime / time * 360f));
 
             yield return null;
         }
@@ -88,7 +90,7 @@ public class GameManager : MonoBehaviour
         }
         else // 틀렸을 경우
         {
-
+            bedSheet.localScale = Vector2.one;
 
             GameStatusChangeEvent(GameStatus.GameOver);
         }

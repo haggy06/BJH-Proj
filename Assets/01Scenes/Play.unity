@@ -134,6 +134,8 @@ GameObject:
   - component: {fileID: 456714220}
   - component: {fileID: 456714219}
   - component: {fileID: 456714218}
+  - component: {fileID: 456714221}
+  - component: {fileID: 456714222}
   m_Layer: 0
   m_Name: Medicine Sheet_O
   m_TagString: Untagged
@@ -247,12 +249,41 @@ Transform:
   m_GameObject: {fileID: 456714217}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.5, y: 3.5, z: 0}
+  m_LocalPosition: {x: -2.5, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &456714221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456714217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a6e948557a9b34487b9d52c5a40766, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aliveImg: {fileID: 21300000, guid: d88c165771a977e4dbcc6e8eded82b0b, type: 3}
+  deadImg: {fileID: 21300000, guid: c36f71d63b669d04db6892d97685ef5f, type: 3}
+  clearImg: {fileID: 21300000, guid: 3f6aec3cc183d1d468dfdcb313de6df5, type: 3}
+--- !u!114 &456714222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456714217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8903284c538208a4f894cdaac9f7a216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  check: {fileID: 774877389}
+  answer: 1
 --- !u!1 &643566890
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,6 +295,8 @@ GameObject:
   - component: {fileID: 643566893}
   - component: {fileID: 643566892}
   - component: {fileID: 643566891}
+  - component: {fileID: 643566894}
+  - component: {fileID: 643566895}
   m_Layer: 0
   m_Name: Medicine Sheet_X
   m_TagString: Untagged
@@ -377,12 +410,41 @@ Transform:
   m_GameObject: {fileID: 643566890}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5, y: 3.5, z: 0}
+  m_LocalPosition: {x: 2.5, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &643566894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643566890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a6e948557a9b34487b9d52c5a40766, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aliveImg: {fileID: 21300000, guid: a0350cb546fe4ea40a0d51d007f088da, type: 3}
+  deadImg: {fileID: 21300000, guid: e5243164f8f94fd4dbc90883cc75f559, type: 3}
+  clearImg: {fileID: 21300000, guid: 274582ad224996e45b2cc4df43b4c67c, type: 3}
+--- !u!114 &643566895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643566890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8903284c538208a4f894cdaac9f7a216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  check: {fileID: 774877389}
+  answer: 0
 --- !u!1 &752679583
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,7 +523,7 @@ Transform:
   m_GameObject: {fileID: 752679583}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3, z: 0}
+  m_LocalPosition: {x: 0, y: -4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -478,6 +540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 774877388}
   - component: {fileID: 774877387}
+  - component: {fileID: 774877389}
   m_Layer: 0
   m_Name: Check
   m_TagString: Untagged
@@ -552,6 +615,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &774877389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774877386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcbcdd9d42bc8349ab10089255c2c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalPos: {x: 0, y: -8}
 --- !u!1 &776825085
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,6 +722,7 @@ GameObject:
   m_Component:
   - component: {fileID: 970314175}
   - component: {fileID: 970314174}
+  - component: {fileID: 970314176}
   m_Layer: 0
   m_Name: Flatline
   m_TagString: Untagged
@@ -714,12 +791,27 @@ Transform:
   m_GameObject: {fileID: 970314173}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5, y: -1, z: 0}
+  m_LocalPosition: {x: -1.5, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &970314176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970314173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a6e948557a9b34487b9d52c5a40766, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aliveImg: {fileID: 21300000, guid: d7f22510c4c1a64479e14f8f50ac7887, type: 3}
+  deadImg: {fileID: 21300000, guid: 92c16211280434241b7256a3a3340bf7, type: 3}
+  clearImg: {fileID: 21300000, guid: d7f22510c4c1a64479e14f8f50ac7887, type: 3}
 --- !u!1 &1130376847
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,10 +1019,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f977d3413b97be4ca0974dce105f0c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  medicineQ: {fileID: 0}
+  medicineQ: {fileID: 11400000, guid: 858ea089cdba41944bdccc4bb15d5c03, type: 2}
   time: 5
-  clockNeedle: {fileID: 0}
-  bedSheet: {fileID: 0}
+  clockNeedle: {fileID: 776825086}
+  bedSheet: {fileID: 2133239343}
 --- !u!4 &1687207118
 Transform:
   m_ObjectHideFlags: 0
