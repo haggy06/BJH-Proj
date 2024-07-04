@@ -69,6 +69,9 @@ public class GameManager : MonoBehaviour
     WaitForSeconds wfs = new WaitForSeconds(2f);
     private IEnumerator CountBeforeStart()
     {
+        bedSheet.localScale = new Vector2(0.5f, 1f);
+        clockNeedle.eulerAngles = Vector3.zero;
+
         LeanTween.cancel(sID);
         speedUpPopup.alpha = 0f;
 
@@ -126,6 +129,7 @@ public class GameManager : MonoBehaviour
         TimeOver();
     }
 
+    [SerializeField]
     private int score = 0;
     public int Score
     {
